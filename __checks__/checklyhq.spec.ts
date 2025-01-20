@@ -5,7 +5,7 @@ test('navigate to docs and search for traces', async ({ page }) => {
   await page.getByRole('button', { name: 'Developers' }).first().click();
   await page.getByRole('link', { name: 'Documentation Technical docs' }).click();
   await expect(page.getByRole('heading', { name: 'Getting started with Checkly' })).toBeVisible();
-  await page.getByLabel('Search (Command+K)').click();
+  await page.locator('button.DocSearch').click();
   await expect(page.getByPlaceholder('Search docs')).toBeEmpty();
   await page.getByPlaceholder('Search docs').click();
   await page.getByPlaceholder('Search docs').fill('traces');
@@ -13,7 +13,7 @@ test('navigate to docs and search for traces', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Importing your traces to' })).toBeVisible();
 });
 
-test('navigate to main blog it loads correctly', async ({ page }) => {
+test('navigate to main blog and it loads correctly', async ({ page }) => {
   await page.goto('https://www.checklyhq.com');
   await page.getByRole('link', { name: 'Blog' }).first().click();
   await expect(page.getByRole('heading', { name: 'The Checkly Blog' })).toBeVisible();
