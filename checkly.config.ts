@@ -5,13 +5,13 @@ import { defineConfig } from 'checkly'
  */
 const config = defineConfig({
   /* A human friendly name for your project */
-  projectName: 'checkly-playwright-test',
+  projectName: 'checkly-playground',
   /** A logical ID that needs to be unique across your Checkly account,
   * See https://www.checklyhq.com/docs/cli/constructs/ to learn more about logical IDs.
   */
-  logicalId: 'checkly-playwright-test',
+  logicalId: 'checkly-playground',
   /* An optional URL to your Git repo */
-  repoUrl: 'https://github.com/checkly/checkly-cli',
+  repoUrl: 'https://github.com/guolau/checkly-playground',
   /* Sets default values for Checks */
   checks: {
     /* A default for how often your Check should run in minutes */
