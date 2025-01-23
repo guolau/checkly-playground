@@ -13,5 +13,8 @@
     "checkly": "latest",
     "ts-node": "latest",
     "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
