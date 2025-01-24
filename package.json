@@ -2,7 +2,9 @@
   "name": "checkly-playwright-test",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "ENV=development npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -11,10 +13,8 @@
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.7",
     "checkly": "latest",
+    "dotenv": "^16.4.7",
     "ts-node": "latest",
     "typescript": "5.3.3"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7"
   }
 }

@@ -1,10 +1,10 @@
-import 'dotenv/config'
 import { test, expect } from '@playwright/test'
+import * as config from '../utils/config'
 
 const baseUrl = 'https://api.checklyhq.com/v1/maintenance-windows'
 const headers = {
-  'X-Checkly-Account': process.env.CHECKLY_ACCOUNT_ID!,
-  Authorization: `Bearer ${process.env.CHECKLY_API_KEY!}`,
+  'X-Checkly-Account': config.CHECKLY_ACCOUNT_ID!,
+  Authorization: `Bearer ${config.CHECKLY_API_KEY!}`,
 }
 
 test('create, retrieve, and delete a maintainence window', async ({ request }) => {
