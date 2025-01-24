@@ -1,4 +1,5 @@
 import { defineConfig } from 'checkly'
+import { emailChannel, smsChannel } from './__checks__/alert-channels'
 
 /**
  * See https://www.checklyhq.com/docs/cli/project-structure/
@@ -35,6 +36,7 @@ const config = defineConfig({
       * can just write native Playwright code. See https://www.checklyhq.com/docs/cli/using-check-test-match/
       * */
       testMatch: '**/__checks__/**/*.spec.ts',
+      alertChannels: [emailChannel, smsChannel]
     },
   },
   cli: {
